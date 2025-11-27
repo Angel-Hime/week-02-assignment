@@ -6,56 +6,73 @@ console.log("Console Test");
 
 const imageData = [
   {
-    imageName: "value",
-    imageSrc: "images/hard-rock-cafe-album.jpg",
-    imageAlt: "value",
+    imageName: ".hardRockCafeAlbum",
+    imageSrc: "./images/hard-rock-cafe-album.jpg",
+    imageAlt: "A low lit, high exposure image of Hard Rock Cafe",
   },
   {
-    imageName: "value",
-    imageSrc: "images/snow-tram-album.jpg",
-    imageAlt: "value",
+    imageName: ".snowTramAlbum",
+    imageSrc: "./images/snow-tram-album.jpg",
+    imageAlt:
+      "A tram travelling towards the photographer during a heavy snow fall at night",
   },
   {
-    imageName: "value",
-    imageSrc: "images/south-korean-street-album.jpg",
-    imageAlt: "value",
+    imageName: ".southKoreanStreetAlbum",
+    imageSrc: "./images/south-korean-street-album.jpg",
+    imageAlt:
+      "A street in South Korea, during the day, with high rise buildings and full of cars and people",
   },
   {
-    imageName: "value",
-    imageSrc: "images/souvenirs-shop-album.jpg",
-    imageAlt: "value",
+    imageName: ".souvenirsShopAlbum",
+    imageSrc: "./images/souvenirs-shop-album.jpg",
+    imageAlt:
+      "At night a souvenir shop is lit so that you can see the interior past the external facia",
   },
 ];
 
 // STEP 2: create thumbnail images
 
 function createThumbnails() {
-  // select the DOM element (albumContainer) to contain thumbnail images
-  // this is a repetitive task  --> for loop(for, forEach()...)
-  // loop task
-  //- create img element
-  // const thumbnailImage = createElement("img");
-  //- update the src and alt attributes of img element to match those in t he array (parameters)
-  //thumbnailImage.style.imageSrc = imageData[];
-  //- give each img a className(img.className)
-  //- add eventlistener to each image --> the event handler is the function you write to create the fullscreen images (function in Step 3)
-  // - apend the created images to thumbnail container
+  // select the DOM element (albumDisplay) to contain thumbnail images
+  const albumDisplay = document.getElementById("albumDisplay");
+  //TODO: this is a repetitive task  --> for loop(for, forEach()...)
+  imageData.forEach(function (item) {
+    //Loop task
+    //- create img element
+    const thumbnailImage = document.createElement("img");
+    //- update the src and alt attributes of img element to match those in the array (parameters)
+    thumbnailImage.src = [item.imageSrc];
+    thumbnailImage.alt = [item.imageAlt];
+    //- give each img a className(img.className)
+    thumbnailImage.className = [item.imageName];
+    //- add eventlistener to each image --> the event handler is the function you write to create the fullscreen images (function in Step 3)
+    thumbnailImage.addEventListener("click", createMainImage);
+    // - apend the created images to thumbnail container
+    albumDisplay.appendChild(thumbnailImage);
+  });
+  //loop ends
 }
 
 // STEP 3: create fullscreen images
 
-function createMainImage() {
-  //this is the event handler
+function createMainImage() /*this is the event handler*/ {
   //select the mainDisplay
+  const mainDisplay = document.getElementById("mainDisplay");
   //delete the current fullscreen image
-  // mainDisplay.innerHTML = ""; <-- OR null
+  mainDisplay.innerHTML = "";
   // create image
-  //update value (propertyies)
-  //add class nme for styling to make it full screen
+  const mainImage = document.createElement("img");
+
+  //update values (properties)
+  mainImage.src = imageSource;
+  mainImage.alt = altText;
+  //add class name for styling to make it full screen
+  mainImage.className = imgClass;
   //append theimage to the container
+  mainDisplay.appendChild(mainImage);
 }
 
-//add the createMain as the event handler of the event above
 // you call the createthumnails function
+createThumbnails();
 
 // think about the stretch goals
