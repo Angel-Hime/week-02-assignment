@@ -13,16 +13,25 @@
     <title>Image Gallery</title>
   </head>
   <body>
-    <section id="albumDisplay"></section>
-    <section id="mainDisplay"></section>
+    <section
+      tabindex="0"
+      role="region"
+      aria-label="album of images"
+      id="albumDisplay"
+    ></section>
+    <section tabindex="0" id="mainDisplay" aria-label="main displayed image">
+      <img
+        class="holding"
+        src="./images/holding.jpg"
+        alt="holding image, please select image from album"
+      />
+    </section>
     <footer>
       <nav>
-        <button id="darkMode">Dark Mode</button>
-        <a
-          href="https://www.flaticon.com/free-icons/gallery"
-          title="gallery icons"
-          >Gallery icons created by Freepik - Flaticon</a
-        >
+        <select id="darkMode" name="dark/light">
+          <option>Light Mode</option>
+          <option>Dark Mode</option>
+        </select>
       </nav>
     </footer>
   </body>

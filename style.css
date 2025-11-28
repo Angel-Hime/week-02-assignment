@@ -16,6 +16,11 @@ body {
   max-height: fit-content; */
 }
 
+.holding {
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
 #albumDisplay {
   grid-column-start: 1;
   grid-column-end: 2;
@@ -110,6 +115,7 @@ body {
     z-index: 0;
   }
 }
+
 @media (max-width: 500px) {
   body {
     justify-items: center;

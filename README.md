@@ -17,6 +17,7 @@ image gallery
 
     🏹 Add ARIA elements to improve accessibility, such as aria-label, aria-live, and other relevant attributes.
 
+
     🏹 Implement key bindings for buttons to enhance navigation, such as using arrow keys to switch between images.
 
 🎯 Were there any requirements or goals that you were unable to achieve?
@@ -25,4 +26,6 @@ image gallery
 
 Credits/Sources:
 
-<a href="https://www.flaticon.com/free-icons/gallery" title="gallery icons">Gallery icons created by Freepik - Flaticon</a>
+https://unsplash.com/t/street-photography
+
+Gallery icons created by Freepik - Flaticon - https://www.flaticon.com/free-icons/gallery
