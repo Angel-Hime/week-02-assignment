@@ -1,4 +1,4 @@
-console.log("Console Test");
+console.log(screen.height);
 
 //TODO creatae thumbnail images sothat the user can click on them and see them in a full screen format
 
@@ -6,25 +6,25 @@ console.log("Console Test");
 
 const imageData = [
   {
-    imageName: ".hardRockCafeAlbum",
-    imageSrc: "./images/hard-rock-cafe-album.jpg",
+    imageName: ".hardRockCafe",
+    imageSrc: "./images/hard-rock-cafe.jpg",
     imageAlt: "A low lit, high exposure image of Hard Rock Cafe",
   },
   {
-    imageName: ".snowTramAlbum",
-    imageSrc: "./images/snow-tram-album.jpg",
+    imageName: ".snowTram",
+    imageSrc: "./images/snow-tram.jpg",
     imageAlt:
       "A tram travelling towards the photographer during a heavy snow fall at night",
   },
   {
-    imageName: ".southKoreanStreetAlbum",
-    imageSrc: "./images/south-korean-street-album.jpg",
+    imageName: ".southKoreanStreet",
+    imageSrc: "./images/south-korean-street.jpg",
     imageAlt:
       "A street in South Korea, during the day, with high rise buildings and full of cars and people",
   },
   {
-    imageName: ".souvenirsShopAlbum",
-    imageSrc: "./images/souvenirs-shop-album.jpg",
+    imageName: ".souvenirsShop",
+    imageSrc: "./images/souvenirs-shop.jpg",
     imageAlt:
       "At night a souvenir shop is lit so that you can see the interior past the external facia",
   },
@@ -41,35 +41,36 @@ function createThumbnails() {
     //- create img element
     const thumbnailImage = document.createElement("img");
     //- update the src and alt attributes of img element to match those in the array (parameters)
-    thumbnailImage.src = [item.imageSrc];
-    thumbnailImage.alt = [item.imageAlt];
+    thumbnailImage.src = item.imageSrc;
+    thumbnailImage.alt = item.imageAlt;
     //- give each img a className(img.className)
-    thumbnailImage.className = [item.imageName];
+    thumbnailImage.className = item.imageName;
     //- add eventlistener to each image --> the event handler is the function you write to create the fullscreen images (function in Step 3)
-    thumbnailImage.addEventListener("click", createMainImage);
+    thumbnailImage.addEventListener(
+      "click",
+      function createMainImage() /*this is the event handler*/ {
+        // STEP 3: create fullscreen images
+        //select the mainDisplay
+        const mainDisplay = document.getElementById("mainDisplay");
+        //delete the current fullscreen image
+        mainDisplay.innerHTML = null;
+        // create image
+        const mainImage = document.createElement("img");
+
+        //update values (properties)
+        mainImage.src = item.imageSrc;
+        mainImage.alt = item.imageAlt;
+        //add class name for styling to make it full screen
+        mainImage.className = "mainImage";
+
+        //append theimage to the container
+        mainDisplay.appendChild(mainImage);
+      }
+    );
     // - apend the created images to thumbnail container
     albumDisplay.appendChild(thumbnailImage);
   });
   //loop ends
-}
-
-// STEP 3: create fullscreen images
-
-function createMainImage() /*this is the event handler*/ {
-  //select the mainDisplay
-  const mainDisplay = document.getElementById("mainDisplay");
-  //delete the current fullscreen image
-  mainDisplay.innerHTML = "";
-  // create image
-  const mainImage = document.createElement("img");
-
-  //update values (properties)
-  mainImage.src = imageSource;
-  mainImage.alt = altText;
-  //add class name for styling to make it full screen
-  mainImage.className = imgClass;
-  //append theimage to the container
-  mainDisplay.appendChild(mainImage);
 }
 
 // you call the createthumnails function
