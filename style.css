@@ -66,6 +66,7 @@ body {
   body {
     max-width: 100vw;
     max-height: 100vh;
+    align-items: center;
   }
   #albumDisplay {
     justify-self: left;
@@ -116,8 +117,8 @@ body {
     grid-column-start: 2;
     grid-column-end: 3;
 
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
 
     display: flex;
     flex-direction: row;
@@ -142,8 +143,8 @@ body {
     grid-column-start: 1;
     grid-column-end: 4;
 
-    grid-row-start: 1;
-    grid-row-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
   }
   .mainImage {
     z-index: 0;
