@@ -1,4 +1,4 @@
-console.log(screen.height);
+console.log(visualViewport);
 
 //TODO creatae thumbnail images sothat the user can click on them and see them in a full screen format
 
