@@ -1,6 +1,8 @@
 # week-02-assignment
 
-__image gallery__
+__Accessible Image Gallery__
+
+# Reflection
 
 [x]🎯 What requirements did you achieve?
 
