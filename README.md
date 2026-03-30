@@ -4,8 +4,6 @@
 
 __Reflection__
 
-[x]🎯 What requirements did you achieve?
-
 🎯 Implement responsive design methods to ensure the website works well on both small mobile screens and larger desktop screens (e.g., above 800px)
 
     [x] The image stays at a good resolution in different screen sizes as well as within the thumbnail.
