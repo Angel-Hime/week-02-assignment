@@ -6,29 +6,29 @@ __Reflection__
 
 [x]🎯 What requirements did you achieve?
 
-    🎯 Implement responsive design methods to ensure the website works well on both small mobile screens and larger desktop screens (e.g., above 800px)
+🎯 Implement responsive design methods to ensure the website works well on both small mobile screens and larger desktop screens (e.g., above 800px)
 
-[x] The image stays at a good resolution in different screen sizes as well as within the thumbnail.
+    [x] The image stays at a good resolution in different screen sizes as well as within the thumbnail.
 
-    🎯 Implement at least one meaningful media query so that there is a noticeable change between mobile and desktop view (an example is to change where the ‘thumbnail bar’ is positioned).
+🎯 Implement at least one meaningful media query so that there is a noticeable change between mobile and desktop view (an example is to change where the ‘thumbnail bar’ is positioned).
 
-[x] I have added two media queries into the CSS for the purpose of adjusting the location of the album scroll bar for different screen widths.
+    [x] I have added two media queries into the CSS for the purpose of adjusting the location of the album scroll bar for different screen widths.
 
-    🎯 Ensure all images have appropriate alt text attributes for accessibility.
+🎯 Ensure all images have appropriate alt text attributes for accessibility.
 
-[x] All images, including the holding image has alt text to provide a description of said image.
+    [x] All images, including the holding image has alt text to provide a description of said image.
 
-    🎯 Correctly use event handlers to switch images based on user interactions.
+🎯 Correctly use event handlers to switch images based on user interactions.
 
-[x] Using event handlers, I was able to swap photos with the mouse by selecting the image from the toolbar as well as using the keys 'tab' and 'enter'
+    [x] Using event handlers, I was able to swap photos with the mouse by selecting the image from the toolbar as well as using the keys 'tab' and 'enter'
 
-    🏹 Add ARIA elements to improve accessibility, such as aria-label, aria-live, and other relevant attributes.
+🏹 Add ARIA elements to improve accessibility, such as aria-label, aria-live, and other relevant attributes.
 
-[x] Aria labels and tab index attributes have been added to the album scroller and the main image; they have also been added to the album images to allow keyboard control.
+    [x] Aria labels and tab index attributes have been added to the album scroller and the main image; they have also been added to the album images to allow keyboard control.
 
-    🏹 Implement key bindings for buttons to enhance navigation, such as using arrow keys to switch between images.
+🏹 Implement key bindings for buttons to enhance navigation, such as using arrow keys to switch between images.
 
-Using the aria labels and the tab index attributes, I was able to control the focus feature to select images by tabbing through the album images and then using the enter key to select to display the image.
+    [x] Using the aria labels and the tab index attributes, I was able to control the focus feature to select images by tabbing through the album images and then using the enter key to select to display the image.
 
 # The following include queries on some of the functionality that I was not able to achieve at this stage of the bootcamp
 
